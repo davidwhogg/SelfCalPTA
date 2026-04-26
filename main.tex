@@ -24,6 +24,10 @@ Self-calibration of a pulsar timing array, in the context of a realistic gravita
 
 \maketitle
 
+\paragraph{Abstract:}
+We find a hacky statistic that can be used to phase up (learn the extremely precise distances to) the pulsars in a pulsar timing array.
+We show that this works with fake data and get ready to run on everything and destroy the world.
+
 \paragraph{Introduction:}
 Right now, the way the pulsar-timing community looks for gravitational wave (GW) sources is by looking solely at the ``Earth term.''
 That is, gravitational waves are found by looking for the correlations in timing residuals across pulsars from the fact that the Earth is being displaced by the GWs, relative to all of the pulsar clocks.
@@ -32,7 +36,12 @@ When the dominant GW signal at the Earth is stochastic---which, for our purposes
 Things would be different if a single GW source dominated the timing signals, but we now know pretty confidently that this is not the case.
 
 A (possibly irrelevant) historical fact about astronomy is that stochastic backgrounds have almost never been discovered prior to the discovery of discrete, identifiable sources.
-For example, HOGG.
+For example, radio sources were found before the stochastic radio background of confused, faint sources.
+For another, infrared sources were found before the infrared background.
+There are perhaps exceptions, such as the cosmic microwave background radiation, but this exception proves the rule:
+This radiation source is not composed of compact sources.
+When any background is produced by a mixture of compact sources, we have always found the compact sources prior to the background.
+The only exception I can think of is cosmic rays, but the (putative) compact sources are spread across the sky by magnetic-field deviations.
 
 My position---controversial---is that \emph{if} we could phase up a pulsar timing array, the sensitivity of the array to GW sources would increase by an enormous factor, possibly $>10^7$.
 Phasing up the array involves inferring the positions of the pulsars to a small fraction of a wavelenth, which is a positional precision of much less than a light year, for pulsars that are typically $>10^4$\,ly [HOGG?] away.
@@ -41,7 +50,15 @@ Most approaches to this problem assume that there are very few sources, in part 
 I remind the reader that we know, at present, that there are \emph{not} very few sources dominating the timing-residual signals we have.
 
 \paragraph{Problem setup:}
+There are $N$ pulsars $i$ ($1\leq i\leq N$), each of which is being timed, and for each of which there is a sophisticated timing model, which includes pulse period, binarity, acceleration, spin-down and whatever else is being modeled.
+The data from each pulsar $i$---for our purposes---is a set of $M_i$ timing residuals $\Delta_{ij}$ measured at mean time $t_{ij}$ ($1\leq j\leq M_i$).
+That is, there are ragged data, which are timing residuals (in units of ns, say) as a function of time (in BJD, say).
+
+Each pulsar $i$ has an angular position $\Omega_i$ on the sky.
+If each pulsar had a distance $D_i$, measured or understood accurately enough, we could ``phase up'' the array and do GW interferometry.
+That's the goal of this project.
 
 \paragraph{Correlations:}
+
 
 \end{document}
